@@ -1,0 +1,43 @@
+{% extends 'ramblr/base/base.html' %}
+<!--  -->
+{% block title %} {% endblock title %}
+<!--  -->
+{% block head %}
+
+{% endblock head %}
+<!--  -->
+
+{% block layout %}
+    <style>
+        .parent {
+            display: grid;
+            place-items: center;
+        }
+
+        .visual {
+            aspect-ratio: 16 / 9;
+        }
+
+        .card {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+        }
+    </style>
+
+    <div class="parent white">
+        {% block content %}
+            <div class="card blue">
+                <h1>Video Title</h1>
+                <div class="visual green"></div>
+                <p>Descriptive Text. This demo works in Chromium 84+.</p>
+            </div>
+        {% endblock content %}
+    </div>
+
+    <!--  -->
+{% endblock layout %}
+<!--  -->
+{% block javascript %} {% endblock javascript %}
+<!--  -->

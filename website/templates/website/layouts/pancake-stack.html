@@ -1,0 +1,36 @@
+{% extends 'ramblr/base/base.html' %}
+<!--  -->
+{% block title %} {% endblock title %}
+<!--  -->
+{% block head %}
+
+{% endblock head %}
+<!--  -->
+
+{% block layout %}
+    <style>
+
+        .parent {
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+        }
+
+    </style>
+
+    <div class="parent">
+        <header class="blue section" contenteditable>Header</header>
+        {% block header %} Header Content{% endblock header %}
+        <main class="coral section" contenteditable>
+            {% block content %}
+
+            {% endblock content %}
+        </main>
+        <footer class="purple section" contenteditable>     {% block footer %} Footer Content{% endblock footer %}
+        </footer>
+    </div>
+
+    <!--  -->
+{% endblock layout %}
+<!--  -->
+{% block javascript %} {% endblock javascript %}
+<!--  -->

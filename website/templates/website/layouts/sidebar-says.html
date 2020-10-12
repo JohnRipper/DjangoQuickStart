@@ -1,0 +1,50 @@
+{% extends 'ramblr/base/base.html' %}
+<!--  -->
+{% block title %} {% endblock title %}
+<!--  -->
+{% block head %}
+
+{% endblock head %}
+<!--  -->
+
+{% block layout %}
+    <style>
+        .parent {
+            display: grid;
+            grid-template-columns: minmax(150px, 25%) 1fr;
+        }
+    </style>
+
+    <div class="parent">
+            {% comment %}
+            change proportions as desired, this layout has multiple block contents.
+            {% endcomment %}
+        <div class="section yellow" contenteditable>
+
+            {% comment %}
+            Min: 150px / Max: 25%
+            {% endcomment %}
+
+            {% block content %}{% endblock content %}
+        </div>
+        <div class="section purple" contenteditable>
+            {% comment %}
+            This element takes the second grid position (1fr), meaning
+            it takes up the rest of the remaining space.
+            {% endcomment %}
+            {% block content2 %}{% endblock content2 %}
+        </div>
+    </div>
+
+
+    <div class="parent blue">
+        <div class="box coral" contenteditable>
+            <!--  -->
+        </div>
+    </div>
+
+    <!--  -->
+{% endblock layout %}
+<!--  -->
+{% block javascript %} {% endblock javascript %}
+<!--  -->
