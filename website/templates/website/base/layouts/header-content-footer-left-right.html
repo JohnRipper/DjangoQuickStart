@@ -42,6 +42,10 @@
         <header class="pink section">{% block header %}Header{% endblock header %}</header>
         <div class="left-side blue section" contenteditable>{% block left-sidebar %}Left Sidebar{% endblock left-sidebar %}</div>
         <main class="section coral" contenteditable>  {% block content %}Main Content{% endblock content %}</main>
+    {% include "website/sidebar/left.html" %}
+    {% include "website/sidebar/right.html" %}
+    {% include "website/footer/footer.html" %}
+
         <div class="right-side yellow section" contenteditable>{% block right-sidebar %}Right Sidebar{% endblock right-sidebar %}</div>
         <footer class="green section">{% block footer %}Footer{% endblock footer %}</footer>
     </div>

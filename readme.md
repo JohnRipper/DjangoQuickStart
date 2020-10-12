@@ -10,3 +10,6 @@ python manage.py runserver
 
 ### remember to enable a filewatcher on the /static/bulma directory and run
 sass bulma.sass ./css/style.css
+
+####layouts
+Some modification necessary. enable the examples app for details. 

@@ -12,41 +12,35 @@
 </head>
 <body>
 
-{% include "website/nav/navbar.html" %}
+{% include "website/base/includes/nav/navbar.html" %}
 
-<section class="section ">
-    <div class="container ">
+<div class="container ">
 
-        {% comment %}
+    {% comment %}
         template engine needs to be updated to use is-primary, is-link is-dark is-danger from bulmas templating engine
         is-error from the default should redirect to is-danger.
         change in theme or template engine.
         {% endcomment %}
-        {% if messages %}
-            {% for message in messages %}
-                <article  {% if message.tags %} class="message is-{{ message.tags }}"{% endif %}>
-                    <div class="message-header">
-                        <p>{{ message }}</p>
-                        <button class="delete" aria-label="delete"></button>
+    {% if messages %}
+        {% for message in messages %}
+            <article  {% if message.tags %} class="message is-{{ message.tags }}"{% endif %}>
+                <div class="message-header">
+                    <p>{{ message }}</p>
+                    <button class="delete" aria-label="delete"></button>
+                </div>
+                {% if message_body %}
+                    <div class="message-body">
+                        {{ message_body }}
                     </div>
-                    {% if message_body %}
-                        <div class="message-body">
-                            {{ message_body }}
-                        </div>
-                    {% endif %}
-                </article>
-            {% endfor %}
-        {% endif %}
+                {% endif %}
+            </article>
+        {% endfor %}
+    {% endif %}
 
+</div>
 
+{% block layout %} {% block content %}  {% endblock content %}{% endblock layout %}
 
-        {% block layout %} {% block content %}  {% endblock content %}{% endblock layout %}
-
-
-        <!-- Main container -->
-
-    </div>
-</section>
 </body>
 </html>
 

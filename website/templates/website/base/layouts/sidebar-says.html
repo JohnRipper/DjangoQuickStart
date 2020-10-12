@@ -1,4 +1,4 @@
-{% extends 'ramblr/base/base.html' %}
+{% extends 'website/base/base.html' %}
 <!--  -->
 {% block title %} {% endblock title %}
 <!--  -->
@@ -19,20 +19,20 @@
             {% comment %}
             change proportions as desired, this layout has multiple block contents.
             {% endcomment %}
-        <div class="section yellow" contenteditable>
+        <div class="section yellow" >
 
             {% comment %}
             Min: 150px / Max: 25%
             {% endcomment %}
 
-            {% block content %}{% endblock content %}
+            {% block sidebar %} <div class="" >Sidebar block</div>{% endblock sidebar %}
         </div>
-        <div class="section purple" contenteditable>
+        <div class="section purple" >
             {% comment %}
             This element takes the second grid position (1fr), meaning
             it takes up the rest of the remaining space.
             {% endcomment %}
-            {% block content2 %}{% endblock content2 %}
+            {% block content %}{% endblock content %}
         </div>
     </div>
 

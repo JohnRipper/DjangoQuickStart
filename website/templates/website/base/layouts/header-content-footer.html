@@ -1,4 +1,4 @@
-{% extends 'ramblr/base/base.html' %}
+{% extends 'website/base/base.html' %}
 <!--  -->
 {% block title %} {% endblock title %}
 <!--  -->
@@ -17,15 +17,20 @@
 
     </style>
 
+
     <div class="parent">
-        <header class="blue section" contenteditable>Header</header>
-        {% block header %} Header Content{% endblock header %}
-        <main class="coral section" contenteditable>
+        <header class="has-background-primary section" contenteditable>
+            {% block header %} Header Content{% endblock header %}
+        </header>
+
+        <main class="section" contenteditable>
             {% block content %}
 
             {% endblock content %}
         </main>
-        <footer class="purple section" contenteditable>     {% block footer %} Footer Content{% endblock footer %}
+
+        <footer class="section" contenteditable>         {% include "website/base/includes/footer.html" %}
+
         </footer>
     </div>
 

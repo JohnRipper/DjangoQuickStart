@@ -1,0 +1,45 @@
+{% extends 'ramblr/base/base.html' %}
+<!--  -->
+{% block title %} {% endblock title %}
+<!--  -->
+{% block head %}
+
+{% endblock head %}
+<!--  -->
+
+{% block layout %}
+    <style>
+
+   .parent {
+    display: grid;
+    place-items: center;
+  }
+
+   .card {
+    width: clamp(23ch, 50%, 46ch);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+   .visual {
+      height: 125px;
+      width: 100%;
+    }
+    </style>
+
+    <div class="parent white">
+        {% block content %}
+     <div class="card purple">
+      <h1>Title Here</h1>
+      <div class="visual yellow"></div>
+      <p>Descriptive Text. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed est error repellat veritatis.</p>
+    </div>
+        {% endblock content %}
+    </div>
+
+    <!--  -->
+{% endblock layout %}
+<!--  -->
+{% block javascript %} {% endblock javascript %}
+<!--  -->
